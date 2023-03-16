@@ -27,3 +27,11 @@
 # some_list = list(some_tuple)
 # print(id(some_tuple))
 # print(id(some_list))
+
+# some_set = {1, 2, 3, 6, 6, 9}
+# print(some_set)
+
+# import random
+
+# some_list = [random.randint(1, 50) for _ in range(100)]
+# print(40 in some_list)
