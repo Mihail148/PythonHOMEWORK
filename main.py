@@ -35,3 +35,12 @@
 
 # some_list = [random.randint(1, 50) for _ in range(100)]
 # print(40 in some_list)
+
+# def square(a):
+#     return a ** 2
+
+# some_list = [1, 2, 3, 4, 5]
+# print(list(map(square, some_list)))
+
+# for i in range(len(some_list)):
+#     some_list[i] = some_list[i] ** 2
