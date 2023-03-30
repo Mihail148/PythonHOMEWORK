@@ -26,29 +26,17 @@
 # Ввод. Вывод
 
 
-# 928 21 23 12 41
+# 9 28 21 23 12 41
 
-# 621 18 26 41 18 23 53 121 & 31
-# 18425 31 15 22 
+# 6 21 18 26 41 18 23 53 121 & 31
+# 18 4 25 31 15 22 
 
 # 2 13 19 28 12
 
-import random
-
-input_srt_list = {}
-
-input_len_srt_list = int(input("Введите количество пар строк: "))
-
-for i in range(input_len_srt_list):
-    input_srt_list[i] = []
-    input_srt_list[i].append(list(map(lambda x: int(x),input("Введите числа разделенные пробелами: ").split())))
-    input_srt_list[i].append(list(map(lambda x: int(x),input("Введите числа разделенные пробелами: ").split())))
-        
-# print(input_srt_list[0])
-result = []
-for couple in input_srt_list:
-    for i in range(2):   
-        result.append(list(set(list(filter(lambda x: x % 10 == 1 or x % 10 == 3, input_srt_list[couple][i])))))
-
-        
-print(result)        
+n = int(input())
+some_list = [[i for i in input().split() if i[-1] in ('1', '3')] for i in range(2 * n)]
+print(some_list)
+for ind in range(0, len(some_list) - 1, 2):
+    res = list(set(some_list[ind]).intersection(set(some_list[ind + 1])))
+    res = list(map(int, res))
+    print(*sorted(res, reverse=True), sep=' & ')
